@@ -1,0 +1,114 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /*Essa parte serve para tirar configurações padrões*/
+}
+
+/* Estiliza o corpo da página */
+body {
+    display: flex;
+    /* Utiliza flexbox para centralizar a calculadora */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /*Centraliza Verficalmente */
+    height: 100vh;
+    /*Altura da tela completa */
+    background-color: #f0f0f0;
+    /* Cor de Fundo */
+    font-family: Arial, sans-serif;
+    /*Fonte Padrão*/
+}
+
+/*Estiliza a calculadora*/
+
+.calculator {
+    display: grid;
+    /*Utiliza grid layout*/
+    grid-template-columns: 1fr 4fr;
+    /*Divide a área em duas partes:display: e botões*/
+    width: 300px;
+    /* Largura da Calculadora*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /*Sombra*/
+    background-color: #fff;
+    /* Cor de fundo */
+    border-radius: 10px;
+    /* Borda Arredondada*/
+}
+
+/* Estiliza o display da calculadora */
+
+.display {
+    grid-row: 1;
+    /* Ocupa a primeira linha do grid */
+    background-color: #222;
+    /* Cor de Fundo */
+    color: #fff;
+    /* cor do texto */
+    font-size: 2em;
+    /* Tamanho da fonte */
+    padding: 20px;
+    /* Espaçamento interno */
+    text-align: right;
+    /* Alinha o texto á direita*/
+    border-top-left-radius: 10px;
+    /* Borda superior esquerda arredondada*/
+    border-top-right-radius: 10px
+        /* Borda superior direita arredondada;*/
+}
+
+/* Estiliza os botões */
+
+.buttons {
+    grid-row: 2;
+    /* Ocupa a segunda linha do grid */
+    display: grid;
+    /* Utiliza o grid layout */
+    grid-template-columns: repeat(4, 1fr);
+    /* Quatro clunas de tamanho igual */
+    gap: 1px;
+    /* Espaçamento entre os botões */
+}
+
+
+/* Estiliza cada botão  individualmente*/
+
+.btn {
+    background-color: #e0e0e0;
+    /* Cor de fundo */
+    border: none;
+    /* Remova a borda padrão*/
+    padding: 30px;
+    /* Espaçamento interno */
+    font-size: 1.5em;
+    /* Tamanho da fonte */
+    cursor: pointer;
+    /* Muda o curss ao passar por cima */
+}
+
+/*Estila os botões de operadores */
+
+.btn-operator {
+    background-color: #f9a825;
+    /*cor botão*/
+    color: #fff;
+    /* cor texto*/
+}
+
+
+/* Estiliza o botão de limpar */
+
+#clear {
+    background-color: #ef2f59; 
+    color: #fff; /*Cor do texto*/
+}
+
+/* Estila o botão de igual */
+
+#equals{
+    background-color: #4caf50;
+    color: #fff;
+    grid-column: span 4; /*Ocupa duas colunas*/
+}
